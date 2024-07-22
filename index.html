@@ -1,0 +1,41 @@
+<!--SueN-CodingAssignment8-JS:Arrays,Loops,DataTypeswithBNH-->
+<!--Coding Assignment 8 - JS: Arrays, Loops, Data Types with BNH-->
+<!--7/28/24-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Sue Ng">
+  <title>SueNCodingAssignment8-JS:Arrays,Loops,DataTypeswithBNH</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+      <p id="bnh"></p>
+      <script>
+
+      //html page
+      let assigned_players = username + ", You choose " + user + "!<br>"
+            + "The computer choose " + computer + "!<br>";
+      document.getElementById('bnh').innnerHTML = assigned_players;
+      document.writeln(assigned_players);
+
+      //display results      
+      let html_determine_the_winner = msg;
+      document.writeln(html_determine_the_winner);
+
+      let user_and_computer_counter = "<br>You have won " + user_counter + " games and the computer has won " + computer_counter + " games.";
+      document.getElementById('bnh').innnerHTML = user_and_computer_counter;  
+      document.writeln(user_and_computer_counter);     
+            
+      let games_counter = "<br>You have played " + game_counter + " BNH games.<br>" + "Bye " + username + "!  Thanks for playing!";            
+      document.getElementById('bnh').innnerHTML = games_counter;
+      document.writeln(games_counter);
+            
+      </script>
+</body>
+
+</html>
