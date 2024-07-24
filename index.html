@@ -1,41 +1,51 @@
-<!--SueN-CodingAssignment8-JS:Arrays,Loops,DataTypeswithBNH-->
-<!--Coding Assignment 8 - JS: Arrays, Loops, Data Types with BNH-->
+<!--SueN-Contacts-->
+<!--Dev 109-->
 <!--7/28/24-->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <meta name="author" content="Sue Ng">
-  <title>SueNCodingAssignment8-JS:Arrays,Loops,DataTypeswithBNH</title>
-  <link href="style.css" rel="stylesheet" type="text/css">
-  <script src="script.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Sue Ng">
+    <title>SueN-Contacts</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="script.js"></script>
 </head>
 
 <body>
-      <p id="bnh"></p>
-      <script>
+    <p id="contacts"></p>
+    <div id="peopleList"></div>
+    <script>
 
-      //html page
-      let assigned_players = username + ", You choose " + user + "!<br>"
-            + "The computer choose " + computer + "!<br>";
-      document.getElementById('bnh').innnerHTML = assigned_players;
-      document.writeln(assigned_players);
+        //PeopleList
+        let peopleListDiv = document.getElementById('peopleList');
+        let tableHTML = '<table>';
+        tableHTML += '<tr><th>Slot Number</th><th>Name</th></tr>';
+        people.forEach(person => {
+            tableHTML += `<tr><td>${person.slot}</td><td>${person.name}</td></tr>`;
+        });
+        tableHTML += '</table>';
 
-      //display results      
-      let html_determine_the_winner = msg;
-      document.writeln(html_determine_the_winner);
+        //call Javascript PeopleList to HTML
+        let show_entire_list = entire_list;
+        document.getElementById('contacts').innnerHTML = show_entire_list;
 
-      let user_and_computer_counter = "<br>You have won " + user_counter + " games and the computer has won " + computer_counter + " games.";
-      document.getElementById('bnh').innnerHTML = user_and_computer_counter;  
-      document.writeln(user_and_computer_counter);     
-            
-      let games_counter = "<br>You have played " + game_counter + " BNH games.<br>" + "Bye " + username + "!  Thanks for playing!";            
-      document.getElementById('bnh').innnerHTML = games_counter;
-      document.writeln(games_counter);
-            
-      </script>
+        //Logic to show PeopleList or not
+        if (show_entire_list === 'y') {
+            peopleListDiv.innerHTML = tableHTML;
+        }
+
+        // Display HTML
+        document.writeln("Please provide a Slot Number associated with a Name.<br>");
+        let input = "Slot Number: " + slot_number + "<br>Name: " + name + "<br>";
+        document.getElementById('contacts').innnerHTML = input;
+        document.writeln(input);
+
+        let result = msg;
+        document.getElementById('contacts').innnerHTML = result;
+        document.writeln(result);
+    </script>
 </body>
 
 </html>
